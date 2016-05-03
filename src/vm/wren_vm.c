@@ -487,7 +487,7 @@ static ObjFiber* loadModule(WrenVM* vm, Value name, const char* source)
   ObjFn* fn = wrenCompile(vm, module, source, true);
   if (fn == NULL)
   {
-    // TODO: Should we still store the module even if it didn't compile?
+    DEALLOCATE(vm, module);
     return NULL;
   }
 
