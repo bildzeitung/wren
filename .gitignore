@@ -36,3 +36,6 @@ ipch/
 *.user
 *.userosscache
 *.sln.docstates
+
+# VIM
+*.swp
